@@ -3,7 +3,11 @@ interface Cycle{
     void speedIncrease(int speed , int increase);
     void speedDecrease(int speed , int decrease);
 }
-class Hero implements Cycle{
+interface MotorCycle{
+    void blowHorn();
+    void blowHorn1();
+}
+class Hero implements Cycle , MotorCycle{
     int speed;
     int increase;
     int decrease;
@@ -16,6 +20,12 @@ class Hero implements Cycle{
          speed = speed - decrease;
          System.out.println(speed+" speed at decrease");
      }
+    public void blowHorn(){
+        System.out.println("Peee Peee");
+    }
+    public void blowHorn1(){
+        System.out.println("Poo Poo");
+    }
 
 }
 
